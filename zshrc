@@ -652,3 +652,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH=~/.npm-global/bin:~/.local/bin:$PATH
+
+export PATH=$PATH:/usr/sbin
+
