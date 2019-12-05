@@ -272,6 +272,7 @@ alias vcentos='vagrant init centos/7'
 alias vubuntu='vagrant init ubuntu/xenial64'
 # Docker alias
 alias dps='docker ps'
+alias dpsf='docker ps --format "{{.Names}}: \n -Image: {{.Image}}\n -RunningFor: {{.RunningFor}}\n -Command: {{.Command}}\n -Ports: {{.Ports}}"'
 alias dim='docker images'
 alias dpull='docker pull'
 alias dexec='docker exec -it'
