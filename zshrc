@@ -656,3 +656,4 @@ export PATH=~/.npm-global/bin:~/.local/bin:$PATH
 
 export PATH=$PATH:/usr/sbin
 
+eval "$(direnv hook zsh)"
