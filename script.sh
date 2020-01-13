@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt-get update
 sudo apt-get install -y zsh git
-git clone https://github.com/vitor-kato/my-zsh
+git clone https://github.com/gustavovs/my-zsh
 cd my-zsh/
 git submodule update --init
 ln -sf $(pwd)/zshrc ~/.zshrc ;
