@@ -652,12 +652,33 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# Export some util paths
 export PATH=~/.npm-global/bin:~/.local/bin:$PATH
 
 export PATH=$PATH:/usr/sbin
 
+# Enable direnv
+
 eval "$(direnv hook zsh)"
+
+# AWS Functions
 
 function login-ecr(){
     eval "$(aws ecr get-login --no-include-email)"
+}
+
+# Docker Functions
+
+removecontainers() {
+    docker stop $(docker ps -aq)
+    docker rm $(docker ps -aq)
+}
+
+docker-armageddon() {
+    removecontainers
+    docker network prune -f
+    docker rmi -f $(docker images --filter dangling=true -qa)
+    docker volume rm $(docker volume ls --filter dangling=true -q)
+    docker rmi -f $(docker images -qa)
 }
