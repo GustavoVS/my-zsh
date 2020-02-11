@@ -14,16 +14,34 @@ Method 2)
 ###### Download the repo
 - `git clone https://github.com/gustavovs/my-zsh.git && cd my-zsh`
 
-###### [Install Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-- On Unbutu/Debian OS
-`sudo apt-get install zsh`
+#### Download the repository
 
-###### Then download Oh-my-zsh
-- `sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" `
+```sh
+git clone https://github.com/vitor-kato/my-zsh.git && cd my-zsh
+```
 
-###### [This adds the syntax highlithing plugin]( https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md )  
-- `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+#### Install Zsh
 
-###### Then make a symbolic link to the zshrc file
+ On Unbutu/Debian OS
 
-`ln -sf $(pwd)/zshrc ~/.zshrc`
+```sh
+sudo apt install zsh
+```
+
+#### Download Oh-my-zsh
+
+```sh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+```
+
+#### Link zshrc file
+
+```sh
+ln -sf $(pwd)/zshrc ~/.zshrc
+```
+
+#### Optional install [syntax highlithing plugin]( https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md )
+
+```sh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
