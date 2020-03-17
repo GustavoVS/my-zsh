@@ -304,6 +304,8 @@ alias gba='git branch -a'
 alias gcm='git commit -m '
 alias gme='git mergetool '
 alias gbr='git branch '
+alias gpu='git pull '
+alias gps='git push -u'
 # Text Editors
 alias c='code .'
 alias a='atom .'
@@ -566,16 +568,6 @@ function s() {
 
 function gbrkeep(){
     git branch | grep -v "$1" | xargs git branch -D
-}
-function gps() {
-    git config --global credential.helper cache
-    git config --global credential.helper 'cache --timeout=604800'
-    git push $1 $2 $3 $4 $5 $6
-}
-function gpu(){
-    git config --global credential.helper cache
-    git config --global credential.helper 'cache --timeout=604800'
-    git pull $1 $2 $3 $4 $5 $6
 }
 
 
